@@ -3,8 +3,9 @@ import { useParams } from 'react-router-dom';
 import { useAuth0 } from "@auth0/auth0-react";
 import io from 'socket.io-client';
 import UserProfile from './UserProfile';
-import RoomUsers from './RoomUsers'
-import Message from './messages/Message'
+import Message from './messages/Message';
+import Invite from './Invite';
+// import RoomUsers from './RoomUsers'
 // import GroupChat from './GroupChat'
 // import ChatArea from './ChatArea';
 
@@ -62,6 +63,7 @@ const Room = () => {
 
     return (
         <div className="container">
+            <Invite />
             <UserProfile />
             {/* ChatArea.js */}
             <div className="container-fluid">
