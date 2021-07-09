@@ -4,8 +4,8 @@ import RightPanel from './RightPanel'
 
 const WelcomePage = () => {
     return (
-        <div className="conatiner-fluid">
-            <div className="row">
+        <div className="conatiner">
+            <div className="row m-0 p-0">
                 <LeftPanel />
                 <RightPanel />
             </div>
