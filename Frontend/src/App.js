@@ -10,7 +10,7 @@ import Join from './components/room/Join'
 const App = () => {
 
     return (
-        <div>
+        <React.Fragment>
             <Navbar />
             <Switch>
                 <Route path="/" exact component={WelcomePage} />
@@ -18,7 +18,7 @@ const App = () => {
                 <ProtectedRoute path="/room/:roomId" component={Room} />
                 <ProtectedRoute path="/join/:roomId" component={Join} />
             </Switch>
-        </div>
+        </React.Fragment>
     );
 };
 

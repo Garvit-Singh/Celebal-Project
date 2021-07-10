@@ -3,7 +3,7 @@ import AuthenticationButton from "./AuthenticationButton";
 import SignupButton from "./SignUpButton";
 
 const AuthNav = () => (
-  <div className="navbar-nav ml-auto right">
+  <div className="navbar-nav right">
     <SignupButton />
     <AuthenticationButton />
   </div>

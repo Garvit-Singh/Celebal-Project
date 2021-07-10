@@ -3,11 +3,10 @@ import AuthNav from "../loginPage/AuthNav";
 
 const Navbar = () => {
   return (
-    <div className="nav-container mb-3 ">
-      <nav className="navbar navbar-expand-md navbar-dark bg-dark justify-content-between">
-        <div className="navbar-brand logo m-2"> 
-            {/* logo */}
-            ChatCord
+    <div className="nav-container">
+      <nav className="navbar navbar-expand-md navbar-dark bg-dark justify-content-between" style={{paddingLeft: "15px"}}>
+        <div className="navbar-brand logo "> 
+            <i className="fab fa-creative-commons"></i> ChatCord
         </div>
         <AuthNav />
       </nav>

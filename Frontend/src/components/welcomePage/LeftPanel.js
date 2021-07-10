@@ -11,7 +11,7 @@ const LeftPanel = () => {
     }
 
     return (
-        <div className="container col-6 border-end" 
+        <div className="container col-md-6 border-end" 
             style={mainPanel}
         >
             {/* <Link to="/profile">

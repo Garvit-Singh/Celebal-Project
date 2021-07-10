@@ -3,8 +3,7 @@ const mainPanel = {
     flexDirection: "column",
     justifyContent: "center", 
     alignContent: "flex-start",
-    height: "80vh",
-    paddingLeft: "50px"
+    height: "80vh"
 }
 
 const info = {
@@ -16,4 +15,10 @@ const infoContent = {
     marginBottom: "20px"
 }
 
-module.exports = {mainPanel, info, infoContent};
+const carouselStyle = {
+    fontWeight: "450",
+    marginBottom: "20px",
+    paddingLeft: "16px"
+}
+
+module.exports = {mainPanel, info, infoContent, carouselStyle};
