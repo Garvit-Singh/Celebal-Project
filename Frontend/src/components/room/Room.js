@@ -2,19 +2,15 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import { useAuth0 } from "@auth0/auth0-react";
 import io from 'socket.io-client';
-import UserProfile from './UserProfile';
 import Message from './messages/Message';
 import Invite from './Invite';
+import { groupChatStyle, titleStyle, roomUserStyle, userListStyle, inputStyle } from './room-page';
+// import UserProfile from './UserProfile';
 // import RoomUsers from './RoomUsers'
 // import GroupChat from './GroupChat'
 // import ChatArea from './ChatArea';
 
 const Room = () => {
-
-    const mystyle = {
-        fontFamily: "Neue Plak W01 Light,sans-serif",
-        fontSize: "20px"
-    }
 
     const { roomId } = useParams()
     const { user } = useAuth0()
@@ -64,25 +60,29 @@ const Room = () => {
     return (
         <div className="container">
             <Invite />
-            <UserProfile />
+            {/* <UserProfile /> */}
             {/* ChatArea.js */}
-            <div className="container-fluid">
-                <div className="container-fluid mt-5">
+            <div className="container-fluid bg-dark">
                     <div className="row">
+
+
                         {/* <RoomUsers /> */}
-                        <div className="col-4 border-end text-center">
-                            <div className="container-fluid" style={mystyle}>Users</div>
+                        <div className="col-md-3 border-end" style={roomUserStyle}>
+                            <h5 className="container-fluid sticky-top" style={titleStyle}>Users</h5>
                             <React.Fragment>
                                 {
                                     userList.map( user => (
-                                        <li key={user.userId}>{user.userName}</li>
+                                        <li style={userListStyle} key={user.userId}>{user.userName}</li>
                                     ))
                                 }
                             </React.Fragment>
                         </div>
+
+
+
                         {/* GroupChat.js */}
-                        <div className="col-8 border-start text-center"> 
-                            <div className="container-fluid" style={mystyle}>Group Chat</div>
+                        <div className="col-md-9 border-start p-0" style={groupChatStyle}> 
+                            <h5 className="container-fluid p-3 sticky-top" style={titleStyle}>Group Chat</h5>
                             <React.Fragment>
                                 {
                                     messages?.map( m => (
@@ -90,13 +90,27 @@ const Room = () => {
                                     ))
                                 }
                             </React.Fragment>
+
+                            <div className="msg-bottom">
+                                <div className="input-group">
+                                    <input className="form-control" style={inputStyle} ref={inputRef} type='text' placeholder="write message..." />
+                                    <div className="input-group-append" onClick={sendMessage}>
+                                        <span className="input-group-text">
+                                            <i className="fa fas fa-paper-plane"></i>
+                                        </span>
+                                    </div>
+                                    {/* <button onClick={sendMessage}>Send</button> */}
+                                </div>
+                            </div>
+
+                            <React.Fragment>
+                            </React.Fragment>
+
                         </div>
                     </div>
-                </div>
+                    
             </div>
             
-            <input ref={inputRef} type='text' />
-            <button onClick={sendMessage}>Send</button>
         </div>
     );
 };

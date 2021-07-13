@@ -1,0 +1,52 @@
+.msg-bottom {
+    position: relative;
+    height: 10%;
+    width: 100%;
+    /* background-color: #007bff; */
+    position: absolute;
+    bottom: 0;
+}
+
+.input-group {
+    float: right;
+    margin-top: 10px;
+    margin-right: 18px;
+    outline: none !important;
+    border-radius: 20px;
+    width: 95% !important;
+    background-color: #fff;
+}
+
+.form-control {
+    border: none !important;
+    border-radius: 20px !important;
+}
+
+.input-group-text {
+    background: transparent !important;
+    border: none !important;
+}
+
+.input-group .fa {
+    padding-top: 4px;
+    color: #2f8021;
+    float: right;
+}  
+
+.bottom-icons {
+    float: left;
+    margin-top: 17px;
+    width: 30% !important;
+    margin-left: 22px;
+}
+
+.bottom-icons .fa {
+    color: #fff;
+    padding: 5px;
+}
+
+.form-control:focus {
+    border-color: none !important;
+    box-shadow: none !important;
+    border-radius: 20px;
+}
