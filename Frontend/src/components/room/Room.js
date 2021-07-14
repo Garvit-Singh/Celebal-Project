@@ -46,6 +46,19 @@ const Room = () => {
         })
     }, [])
 
+    
+    
+  const messagesEndRef = useRef(null)
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+  }
+
+  useEffect(() => {
+    scrollToBottom()
+  }, [messages]);
+
+
     const sendMessage = () => {
         const senderInfo = {
             userId: sub,
@@ -91,7 +104,7 @@ const Room = () => {
                                 }
                             </React.Fragment>
 
-                            <div className="msg-bottom">
+                            <div ref={messagesEndRef} className="msg-bottom sticky-top">
                                 <div className="input-group">
                                     <input className="form-control" style={inputStyle} ref={inputRef} type='text' placeholder="write message..." />
                                     <div className="input-group-append" onClick={sendMessage}>
@@ -102,9 +115,6 @@ const Room = () => {
                                     {/* <button onClick={sendMessage}>Send</button> */}
                                 </div>
                             </div>
-
-                            <React.Fragment>
-                            </React.Fragment>
 
                         </div>
                     </div>

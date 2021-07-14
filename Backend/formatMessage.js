@@ -5,7 +5,7 @@ const formatMessage = (userId, userName, message) => {
         userId,
         userName,
         message, 
-        time: moment().format("hh:mm:ss"),
+        time: moment().format("hh:mm:ss A"),
         ms: moment().millisecond()
     }
 }
