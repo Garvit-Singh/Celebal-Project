@@ -1,3 +1,11 @@
+const roomStyle = {
+    height: "95vh",
+    width: "100vw",
+    paddingTop: "5vh",
+    margin: 0,
+    border: 0
+}
+
 const titleStyle = {
     // fontFamily: "Neue Plak W01 Light,sans-serif",
     // fontSize: "20px",
@@ -13,14 +21,16 @@ const roomUserStyle = {
     color: "#39FF14",
     overflowY: "auto",
     maxHeight: "75vh",
-    position: "relative"
+    position: "relative",
+    borderRadius: "10px 0 0 10px"
 }
 
 const groupChatStyle = {
     overflowY: "auto",
     height: "75vh",
     position: "relative",
-    color: "#fff"
+    color: "#fff",
+    borderRadius: "0 10px 10px 0"
 }
 
 const userListStyle = {
@@ -31,4 +41,16 @@ const inputStyle = {
     position: "sticky"
 }
 
-module.exports =  { titleStyle , roomUserStyle, userListStyle, groupChatStyle, inputStyle}
+const chatWindow = {
+    border: "solid",
+	borderRadius: "10px",
+    borderWidth: "medium",
+    borderColor: "white"
+}
+
+const emojiStyle = {
+    float: "top",
+    top: 100
+}
+
+module.exports =  { roomStyle, chatWindow, titleStyle , roomUserStyle, userListStyle, groupChatStyle, inputStyle, emojiStyle}

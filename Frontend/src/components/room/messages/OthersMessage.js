@@ -6,12 +6,12 @@ const OthersMessage = (props) => {
         
         <div className="container-fluid d-flex flex-row mb-3 mt-1">
             <span className="position-relative bg-secondary text-light rounded p-2" style={other}>
-                <span className="badge text-light p-0 m-0">
+                <span className="badge text-dark p-0 m-0">
                     {props.sender} 
                 </span>
                 <br></br>
                 {props.message}
-                <span class="position-absolute top-100 start-100 translate-middle badge bg-dark text-light rounded-pill">
+                <span className="position-absolute top-100 start-100 translate-middle badge bg-dark text-light rounded-pill">
                     {props.time}
                 </span>
             </span>

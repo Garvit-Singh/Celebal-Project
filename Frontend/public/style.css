@@ -1,3 +1,5 @@
+
+
 .msg-bottom {
     /* position: relative; */
     height: 10%;
@@ -50,3 +52,37 @@
     box-shadow: none !important;
     border-radius: 20px;
 }
+
+
+#roomComponent {
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/* 
+#groupChatComponent {
+  scrollbar-color: rgba(0,0,0,.2) hsla(0,0%,100%,.1) !important;
+  scrollbar-width: thin !important;
+} *//* width */
+
+/* scrollbar-color: rgba(0,0,0,.2) hsla(0,0%,100%,.1);
+scrollbar-width: thin; */
+
+*::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  *::-webkit-scrollbar-track {
+    background: #000; 
+  }
+   
+  /* Handle */
+  *::-webkit-scrollbar-thumb {
+    background: #414345; 
+  }
+  
+  /* Handle on hover */
+  *::-webkit-scrollbar-thumb:hover {
+    background: #414345; 
+  }

@@ -6,7 +6,7 @@ const notification = {
 
 const own = {
     paddingRight: "50px",
-    paddingBottom: "8px",
+    paddingBottom: "10px",
     marginRight: "20px",
     maxWidth: "80%"
 }

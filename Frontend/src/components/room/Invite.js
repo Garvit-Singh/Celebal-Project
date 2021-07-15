@@ -12,7 +12,10 @@ const Invite = () => {
         backgroundColor: "transparent",
         resize: "none",
         outline: "none",
-        overflow: "hidden"
+        overflow: "hidden",
+        color: "transparent",
+        position: "absolute",
+        zIndex: "-5"
     };
       
     function copyToClipboard(e) {
@@ -23,9 +26,6 @@ const Invite = () => {
 
     return (
         <React.Fragment>
-            <span className="badge bg-dark">
-                Invite Link 
-            </span>
             <form>
                 <textarea
                     readOnly 
@@ -36,8 +36,8 @@ const Invite = () => {
                     style={textareastyle}
                 />
             </form>
-            <button className="btn btn-dark" onClick={copyToClipboard}>
-                <i className="fas fa-copy"></i>
+            <button className="btn btn-outline-light m-2" onClick={copyToClipboard}>
+                Invite Link <i className="fas fa-copy"></i>
             </button>
         </React.Fragment>
     );
