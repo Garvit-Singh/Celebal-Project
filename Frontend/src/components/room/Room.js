@@ -4,7 +4,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import io from 'socket.io-client';
 import Message from './messages/Message';
 import Invite from './Invite';
-import { roomStyle, chatWindow, groupChatStyle, titleStyle, roomUserStyle, userListStyle, inputStyle, emojiStyle } from './room-page';
+import { roomStyle, chatWindow, groupChatStyle, titleStyle, roomUserStyle, inputStyle, emojiStyle } from './room-page';
 import EmojiPicker from 'emoji-picker-react';
 // import Emoji from './Emoji'
 // import UserProfile from './UserProfile';
@@ -46,7 +46,7 @@ const Room = () => {
             // console.log(messages)
             setMessages(prev => [...prev, message])
         })
-    }, [])
+    }, [name, sub, roomId])
     
   const messagesEndRef = useRef(null)
 
@@ -89,27 +89,41 @@ const Room = () => {
             <Invite />
             {/* <UserProfile /> */}
             {/* ChatArea.js */}
-            <div className="container bg-dark" style={chatWindow}>
+            <div className="container chat-window" style={chatWindow}>
                     <div className="row">
 
 
                         {/* <RoomUsers /> */}
-                        <div className="col-md-3 border-end" style={roomUserStyle}>
-                            <h5 className="container-fluid sticky-top" style={titleStyle}>Users</h5>
-                            <React.Fragment>
+                        <div className="col-md-3 border-end bg-dark" style={roomUserStyle}>
+                            <h5 className="container-fluid sticky- p-2" style={titleStyle}>Online Users</h5>
+                            <table className="table table-dark">
+                                <React.Fragment>
+                                    {
+                                        userList.map( user => (
+                                            <tbody key={user.userId}>
+                                                <tr>
+                                                    <td>{user.userName}</td>
+                                                </tr>
+                                            </tbody>
+                                            // <li style={userListStyle} key={user.userId}>{user.userName}</li>
+                                        ))
+                                    }
+                                </React.Fragment>
+                            </table>
+                            {/* <React.Fragment>
                                 {
                                     userList.map( user => (
                                         <li style={userListStyle} key={user.userId}>{user.userName}</li>
                                     ))
                                 }
-                            </React.Fragment>
+                            </React.Fragment> */}
                         </div>
 
 
 
                         {/* GroupChat.js */}
                         <div id="groupChatComponent" className="col-md-9 border-start p-0 " style={groupChatStyle}> 
-                            <h5 className="container-fluid p-3 sticky-top" style={titleStyle}>Group Chat</h5>
+                            <h5 className="container-fluid p-3 m-0 sticky-top bg-dark" style={titleStyle}>Group Chat</h5>
                             <React.Fragment>
                                 {
                                     messages?.map( m => (

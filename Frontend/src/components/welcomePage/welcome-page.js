@@ -1,3 +1,7 @@
+const mainContainer = {
+    // height: "80vh"
+}
+
 const mainPanel = { 
     display: "flex", 
     flexDirection: "column",
@@ -16,9 +20,13 @@ const infoContent = {
 }
 
 const carouselStyle = {
-    fontWeight: "450",
-    marginBottom: "20px",
-    paddingLeft: "16px"
+    position: "relative",
+    width: "75%",
+    height: "auto",
+    margin: "0 auto"
+    // fontWeight: "450",
+    // marginBottom: "20px",
+    // paddingLeft: "16px"
 }
 
-module.exports = {mainPanel, info, infoContent, carouselStyle};
+module.exports = {mainContainer, mainPanel, info, infoContent, carouselStyle};

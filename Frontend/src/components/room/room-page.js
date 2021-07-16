@@ -1,15 +1,11 @@
 const roomStyle = {
-    height: "95vh",
-    width: "100vw",
-    paddingTop: "5vh",
-    margin: 0,
-    border: 0
+    height: "92vh",
 }
 
 const titleStyle = {
     // fontFamily: "Neue Plak W01 Light,sans-serif",
     // fontSize: "20px",
-    backgroundColor: "black",
+    // backgroundColor: "black",
     color: "#39FF14",
     textAlign: "center",
     marginBottom: "20px",
@@ -17,7 +13,7 @@ const titleStyle = {
 }
 
 const roomUserStyle = { 
-    backgroundColor: "black",
+    // backgroundColor: "black",
     color: "#39FF14",
     overflowY: "auto",
     maxHeight: "75vh",

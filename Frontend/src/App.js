@@ -6,6 +6,7 @@ import Profile from './components/profile/Profile';
 import WelcomePage from './components/welcomePage/WelcomePage'
 import Room from './components/room/Room'
 import Join from './components/room/Join'
+import Footer from './components/footer/Footer';
 
 const App = () => {
 
@@ -18,6 +19,7 @@ const App = () => {
                 <ProtectedRoute path="/room/:roomId" component={Room} />
                 <ProtectedRoute path="/join/:roomId" component={Join} />
             </Switch>
+            <Footer />
         </React.Fragment>
     );
 };

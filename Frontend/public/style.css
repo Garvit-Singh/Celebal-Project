@@ -86,3 +86,10 @@ scrollbar-width: thin; */
   *::-webkit-scrollbar-thumb:hover {
     background: #414345; 
   }
+
+  .chat-window {
+        background-image: url('./chat_window_background-3.jpeg');
+
+        background-repeat: no-repeat;
+        background-size: cover;
+  }

@@ -3,8 +3,8 @@ import AuthNav from "../loginPage/AuthNav";
 
 const Navbar = () => {
   return (
-    <div className="nav-container" style={{height: "5vh"}}>
-      <nav className="navbar navbar-expand-md navbar-dark bg-dark justify-content-between" style={{paddingLeft: "15px"}}>
+    <div className="nav-container">
+      <nav className="navbar navbar-expand-md navbar-dark bg-dark justify-content-between" style={{paddingLeft: "15px", height: "8vh"}}>
         <div className="navbar-brand logo "> 
             <i className="fab fa-creative-commons"></i> ChatCord
         </div>
