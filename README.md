@@ -15,6 +15,8 @@
 
 # Video Demonstration 
 
-<video src="https://drive.google.com/file/d/1YNw-nAP7w9etvkmKkk2jTCT7ugf1kwSg/view?usp=sharing" width="100%" height="500" />
+<video width="100%" height="500"> 
+    <source src="https://drive.google.com/file/d/1YNw-nAP7w9etvkmKkk2jTCT7ugf1kwSg/view?usp=sharing" type="videp/mp4" />
+</video>
 
 # Thank You!
