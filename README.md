@@ -13,10 +13,9 @@
 
 <image src="images/chat page.png" width="100%" height="500" float="center" />
 
-# Video Demonstration 
-
-<video width="100%" height="500"> 
-    <source src="https://drive.google.com/file/d/1YNw-nAP7w9etvkmKkk2jTCT7ugf1kwSg/view?usp=sharing" type="videp/mp4" />
-</video>
+# Video Demonstration Link
+<a href="https://drive.google.com/drive/folders/1azD0OhYcjaZEVSWT1n0Vq-sjLTRyWX9G?usp=sharing" text-decoration="none">
+  Real Time Chatbot Application
+</a>
 
 # Thank You!
