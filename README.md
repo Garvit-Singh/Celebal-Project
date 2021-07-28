@@ -1,2 +1,6 @@
 # Celebal-Project
- realtime chatbot application
+ Realtime Chatbot Application
+
+# Welcome Page Using ReactJs and Bootstrap
+
+<image src="images/welcome page.png" width="700" height="400" float="center">
